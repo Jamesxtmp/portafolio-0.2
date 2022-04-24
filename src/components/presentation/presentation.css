@@ -1,0 +1,30 @@
+.wrap-presentation{
+    position: relative;
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.wrap-presentation .dates{
+}
+.wrap-presentation img{
+    height: 300px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+.wrap-presentation .name{
+    color: var(--ftc-primary);
+    font-family: var(--ft-informal);
+    font-size: 70px;
+}
+.wrap-presentation .specialty{
+    color: var(--ftc-primary);
+    font-family: var(--ft-code);
+    font-size: 70px;
+    letter-spacing: -5.6px;
+
+}
