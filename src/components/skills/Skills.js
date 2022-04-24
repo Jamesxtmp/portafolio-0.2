@@ -5,9 +5,29 @@ import './skills.css'
 const Skills = () => {
     const skillsByClass = document.getElementsByClassName('skill')
     let prevBrightness = -1
+    let interval = null
+
+    const moveToCorner = ( className ) => {
+        const element = document.getElementsByClassName( className )[0]
+        const coverage = document.getElementsByClassName('coverage')[0]
+        const circle = document.getElementsByClassName('circle')[0]
+        clearInterval( interval )
+        element.style.bottom = '20px'
+        element.style.left = '20px'
+        element.style.opacity = '1'
+        element.style.color = `var(--color-${className})`
+        element.style.zIndex = `6`
+        coverage.style.width = '100vh'
+        coverage.style.height = '100vh'
+        coverage.style.background = `linear-gradient(67.5deg, var(--colorDark-${className}), var(--color-${className}), var(--colorDark-${className}), var(--bg-secondary))`
+        setTimeout(()=>{
+            coverage.style.width = '100vw'
+            coverage.style.borderRadius = '0'
+        }, 200)
+    }
 
     useEffect( () => {
-        const interval = setInterval(() => {
+        interval = setInterval(() => {
             const random = Math.random() * ( skillsByClass.length - 1) + 0; // Math.random() * (max - min) + min;
             let randomFix = random.toFixed()
             while( randomFix === prevBrightness ){
@@ -16,7 +36,7 @@ const Skills = () => {
             }
             prevBrightness = randomFix
 
-            skillsByClass[ randomFix ].style.opacity = '100%'
+            skillsByClass[ randomFix ].style.opacity = '1'
             setTimeout( () => {
                 skillsByClass[ randomFix ].style.opacity = ''
             }, 500)
@@ -26,12 +46,16 @@ const Skills = () => {
 
 
     return(
+        <>
         <div className='wrap-skills' >
-            <div className="skill html fa-brands fa-html5"></div>
-            <div className="skill css fa-brands fa-css3-alt"></div>
-            <div className="skill js fa-brands fa-js-square"></div>
-            <div className="skill react fa-brands fa-react"></div>
+            <div onClick={ () => moveToCorner('html') } className="skill html fa-brands fa-html5"></div>
+            <div onClick={ () => moveToCorner('css') } className="skill css fa-brands fa-css3-alt"></div>
+            <div onClick={ () => moveToCorner('js') } className="skill js fa-brands fa-js-square"></div>
+            <div onClick={ () => moveToCorner('react') } className="skill react fa-brands fa-react"></div>
+            <div className='circle' ></div>
         </div>
+        <div className='coverage'></div>
+        </>  
     )
 }
 export default Skills

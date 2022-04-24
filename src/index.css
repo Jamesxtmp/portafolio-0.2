@@ -9,6 +9,16 @@
     /*? Fuentes */
     --ft-informal: 'Segoe Print';
     --ft-code: 'Courier New';
+
+    /*? SkillsColors*/
+    --color-html: #d84924 ;
+    --colorDark-html: #5c1e0f ;
+    --color-css: #0066b6 ;
+    --colorDark-css: #002d50 ;
+    --color-js: #f7df1e ;
+    --colorDark-js: #645a0a ;
+    --color-react: #5ed3f3 ;
+    --colorDark-react: #1e4752 ;
 }
 *{
     margin: 0;

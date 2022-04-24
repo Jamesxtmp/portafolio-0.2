@@ -10,52 +10,56 @@
     font-size: 200px;
     color: var(--ftc-primary);
     opacity: 10%;
-    /* animation-name: brightness;
-    animation-duration: 10s;
-    animation-iteration-count: infinite; */
     transition: all .5s;
-}.wrap-skills .skill:hover{
-    opacity: 100%;
 }
+
+
 .wrap-skills .html{
-    top: 27%;
+    bottom: 30%;
     left: 84%;
-    /* animation-delay: 4s; */
+}
+.wrap-skills .html:hover{
+    opacity: 100%;
+    color: var(--color-html);
 }
 .wrap-skills .css{
-    top: 10%;
+    bottom: 46%;
     left: 56%;
-    /* animation-delay: 9s; */
+}
+.wrap-skills .css:hover{
+    opacity: 100%;
+    color: var(--color-css);
 }
 .wrap-skills .js{
-    top: 45%;
+    bottom: 20%;
     left: 34%;
-    /* animation-delay: 2s; */
+}
+.wrap-skills .js:hover{
+    opacity: 100%;
+    color: var(--color-js);
 }
 .wrap-skills .react{
-    top: 16%;
+    bottom: 59%;
     left: 11%;
-    /* animation-delay: 6s; */
+}
+.wrap-skills .react:hover{
+    opacity: 100%;
+    color: var(--color-react);
 }
 
 
-/* @keyframes brightness {
-    0% {
-        opacity: 10%;
-    }
-    4% {
-        opacity: 100%;
-    }
-    8%{
-        opacity: 10%;
-    }
-    100%{
-        opacity: 10%;
-    }
-} */
+.coverage{
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 0;
+    transition: all .5s cubic-bezier(0.12, 0, 0.39, 0);
+}
 
-
-button{
-    width: 200px;
-    height: 100px;
+.circle{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
 }
