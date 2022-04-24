@@ -2,7 +2,7 @@
     position: absolute;
     width: 100%;
     bottom: 0;
-    height: calc( 100vh - 280px);
+    height: 100vh;
 }
 
 .wrap-skills .skill{
@@ -11,6 +11,14 @@
     color: var(--ftc-primary);
     opacity: 10%;
     transition: all .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 1px;
+    height: 1px;
+    box-shadow: '';
+    /* box-shadow: 0px 0px 100px 100px white; */
 }
 
 
