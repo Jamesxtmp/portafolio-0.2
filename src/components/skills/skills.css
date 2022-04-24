@@ -1,7 +1,61 @@
 .wrap-skills{
     position: absolute;
-    background-color: red;
     width: 100%;
     bottom: 0;
     height: calc( 100vh - 280px);
+}
+
+.wrap-skills .skill{
+    position: absolute;
+    font-size: 200px;
+    color: var(--ftc-primary);
+    opacity: 10%;
+    /* animation-name: brightness;
+    animation-duration: 10s;
+    animation-iteration-count: infinite; */
+    transition: all .5s;
+}.wrap-skills .skill:hover{
+    opacity: 100%;
+}
+.wrap-skills .html{
+    top: 27%;
+    left: 84%;
+    /* animation-delay: 4s; */
+}
+.wrap-skills .css{
+    top: 10%;
+    left: 56%;
+    /* animation-delay: 9s; */
+}
+.wrap-skills .js{
+    top: 45%;
+    left: 34%;
+    /* animation-delay: 2s; */
+}
+.wrap-skills .react{
+    top: 16%;
+    left: 11%;
+    /* animation-delay: 6s; */
+}
+
+
+/* @keyframes brightness {
+    0% {
+        opacity: 10%;
+    }
+    4% {
+        opacity: 100%;
+    }
+    8%{
+        opacity: 10%;
+    }
+    100%{
+        opacity: 10%;
+    }
+} */
+
+
+button{
+    width: 200px;
+    height: 100px;
 }
